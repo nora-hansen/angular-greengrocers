@@ -33,6 +33,24 @@ button {
   text-align: center;
 }
 
+.store--item-list li {
+  display: grid;
+  place-items: center;
+  grid-row-gap: 0.5rem;
+}
+
+.store--item-icon img {
+  width: 125px;
+  height: 125px;
+}
+
+.store--item-list {
+  display: grid;
+  grid-template-columns: repeat(4, 125px);
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 600px) {
   .store--item-list {
     grid-template-columns: repeat(3, 125px);
@@ -50,6 +68,27 @@ button {
 #cart h2 {
   margin-bottom: 0;
   text-align: center;
+}
+
+.cart--item-list-item {
+  padding: 1rem 0;
+
+  display: grid;
+  grid-template-columns: 24px minmax(150px, 1fr) repeat(3, auto);
+  grid-gap: 0.5rem;
+  align-items: center;
+
+  border-bottom: 1px dotted #000000;
+
+  font-size: 1.25rem;
+}
+
+.cart--item-list li:last-child {
+  border-bottom: none;
+}
+
+.cart--item-icon {
+  width: 24px;
 }
 
 app-cart-list {

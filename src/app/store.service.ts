@@ -17,7 +17,13 @@ export class StoreService {
   }
 
   public addToCart(item: Item) {
-    this.cart.push()
+    if(this.cart.indexOf(item) > -1) {
+      this.cart.map((i) => i.id === item.id ? i.amount = Number(i.amount) +Number(1) : i.amount = 1)
+    }
+    else {
+      this.cart.push(item)
+      this.cart.map((i) => i.id === item.id ? i.amount = 1 : i)
+    }
   }
 
   public getCartItems(): Item[] {

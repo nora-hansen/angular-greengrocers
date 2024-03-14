@@ -8,7 +8,8 @@ import { Item } from 'src/app/models/item';
   styleUrls: ['./cart-list.component.css']
 })
 export class CartListComponent {
-  storeService = inject(StoreService);
+  storeService = inject(StoreService)
 
   cart: Item[] = this.storeService.getCartItems();
+  
 }

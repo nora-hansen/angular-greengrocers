@@ -11,10 +11,7 @@ export class ItemComponent {
   @Input('item') item: Item | null = null;
   storeService = inject(StoreService)
 
-  // Send value to parent to send to cart ?
-  // TODO: Check if this is an okay way to do it
   addToCart(item: Item) {
-    console.log("Adding..")
     this.storeService.addToCart(item);
   }
 }

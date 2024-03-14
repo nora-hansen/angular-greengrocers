@@ -15,4 +15,8 @@ export class ListComponent {
   async ngOnInit() {
     this.items = await this.storeService.items
   }
+
+  addToCart(item: Item) {
+    this.storeService.addToCart(item)
+  }
 }

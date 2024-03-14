@@ -1,4 +1,4 @@
-<li class="cart--item-list-item" *ngIf="item">
+<li *ngIf="item">
     <img
       class="cart--item-icon"
       src="assets/icons/{{item.id}}.svg"
@@ -6,6 +6,6 @@
     />
     <p>{{item.name}}</p>
     <button class="quantity-btn remove-btn center">-</button>
-    <span class="quantity-text center">1</span>
+    <span class="quantity-text center">{{item.amount}}</span>
     <button class="quantity-btn add-btn center">+</button>
   </li>

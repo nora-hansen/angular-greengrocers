@@ -5,6 +5,7 @@ import { ItemComponent } from './item/item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CartListComponent } from './cart-list/cart-list.component';
 import { CartItemComponent } from './cart-item/cart-item.component';
+import { TotalComponent } from './total/total.component';
 
 
 
@@ -13,7 +14,8 @@ import { CartItemComponent } from './cart-item/cart-item.component';
     ListComponent,
     ItemComponent,
     CartListComponent,
-    CartItemComponent
+    CartItemComponent,
+    TotalComponent
   ],
   imports: [
     CommonModule,
