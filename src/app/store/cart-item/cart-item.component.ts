@@ -12,13 +12,11 @@ export class CartItemComponent {
   storeService = inject(StoreService)
   cart = this.storeService.getCartItems()
   
-  getAmount(item: Item) {
-    let amount = 0
+  addToCart(item: Item) {
+    this.storeService.addToCart(item)
+  }
 
-    for(let i of this.cart) {
-      if (i.id === item.id) 
-      amount++
-    }
-    return amount
+  removeFromCart(item: Item) {
+    this.storeService.removeFromCart(item)
   }
 }

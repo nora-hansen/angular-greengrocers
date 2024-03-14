@@ -70,7 +70,7 @@ button {
   text-align: center;
 }
 
-.cart--item-list-item {
+.cart--item-list li {
   padding: 1rem 0;
 
   display: grid;
