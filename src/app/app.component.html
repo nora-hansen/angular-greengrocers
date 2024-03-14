@@ -2,9 +2,15 @@
   <h1>Greengrocers</h1>
   <app-list class="item-list store--item-list"></app-list>
 </header>
-<button (click)="addFilter('vegetable')">Vegetables</button>
-<button (click)="addFilter('fruit')">Fruit</button>
-<button (click)="showAll()">Show all</button>
+<div>
+  <button (click)="addFilter('vegetable')">Vegetables</button>
+  <button (click)="addFilter('fruit')">Fruit</button>
+  <button (click)="showAll()">Show all</button>
+</div>
+<div>
+  <button (click)="sortByPrice()">Sort by price</button>
+  <button (click)="sortByName()">Sort by name</button>
+</div>
 <main id="cart">
   <h2>Your Cart</h2>
   <app-cart-list id="cart" class="cart--item-list-container"></app-cart-list>

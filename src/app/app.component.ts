@@ -1,5 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component, ViewChild, inject } from '@angular/core';
 import { StoreService } from './store.service';
+import { ListComponent } from './store/list/list.component';
 
 @Component({
   selector: 'app-root',
@@ -16,5 +17,14 @@ export class AppComponent {
 
   showAll() {
     this.storeService.showAll()
+  }
+
+  @ViewChild(ListComponent) listChild: ListComponent | undefined
+  sortByPrice() {
+    this.listChild?.sortByPrice()
+  }
+
+  sortByName() {
+    this.listChild?.sortByName()
   }
 }
