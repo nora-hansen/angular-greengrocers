@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment.development';
 export class StoreService {
   http = inject(HttpClient)
   public cart: Item[] = [];
+  public filters: string[] = []
   
   get items() : Promise<Item[]> {
     // @ts-ignore
@@ -38,6 +39,14 @@ export class StoreService {
 
   public getCartItems(): Item[] {
     return this.cart;
+  }
+
+  public showAll() {
+    this.filters.pop()
+  }
+
+  public addFilter(filter: string) {
+    this.filters[0] = filter
   }
 
   constructor() { }

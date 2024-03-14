@@ -10,6 +10,7 @@ import { StoreService } from '../../store.service';
 export class ItemComponent {
   @Input('item') item: Item | null = null;
   storeService = inject(StoreService)
+  filters: string[] = this.storeService.filters
 
   addToCart(item: Item) {
     this.storeService.addToCart(item);
