@@ -23,7 +23,8 @@ import { TotalComponent } from './total/total.component';
   ],
   exports: [
     ListComponent,
-    CartListComponent
+    CartListComponent,
+    TotalComponent
   ]
 })
 export class StoreModule { }
