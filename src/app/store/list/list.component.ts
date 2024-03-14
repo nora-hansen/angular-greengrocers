@@ -1,5 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { StoreService } from '../store.service';
+import { Component, Output, inject } from '@angular/core';
+import { StoreService } from '../../store.service';
+import { Item } from 'src/app/models/item';
 
 @Component({
   selector: 'app-list',

@@ -3,20 +3,25 @@ import { CommonModule } from '@angular/common';
 import { ListComponent } from './list/list.component';
 import { ItemComponent } from './item/item.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CartListComponent } from './cart-list/cart-list.component';
+import { CartItemComponent } from './cart-item/cart-item.component';
 
 
 
 @NgModule({
   declarations: [
     ListComponent,
-    ItemComponent
+    ItemComponent,
+    CartListComponent,
+    CartItemComponent
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   exports: [
-    ListComponent
+    ListComponent,
+    CartListComponent
   ]
 })
 export class StoreModule { }

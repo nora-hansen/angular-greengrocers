@@ -1,1 +1,4 @@
-<p>item works!</p>
+<li class="store--item-list-item" *ngIf="item">
+    <img class="store--item-icon" src="assets/icons/{{item.id}}.svg" alt="{{item.name}}" />
+    <button (click)="addToCart(item)">Button</button>
+</li>
